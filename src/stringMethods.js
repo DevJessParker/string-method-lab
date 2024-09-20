@@ -47,7 +47,17 @@ function getIndexOf(phrase,word) {
 }
 
 
-function sliceString() {}
+function sliceString(phrase,position1,position2) {
+    if (phrase) {
+        if (typeof(phrase) == 'number') {
+            return 'Value given to function was of Data Type: number';
+        } else {
+            return phrase.slice(position1,position2);
+        }
+    } else {
+        return 'String is empty';
+    }
+}
 
 
 function splitString() {}
