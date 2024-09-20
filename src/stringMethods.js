@@ -1,11 +1,16 @@
 function getCharAt(str) {
     if (str) {
-        let testString = str;
-        return testString.charAt(1);
+        if (typeof(str) == 'string') {
+            let testString = str;
+            return testString.charAt(1);
+        } else {
+            return 'Value given to function was of Data Type: number';
+        }
     } else {
         return 'String is empty'
     }
 }
+
 
 function concatenateStrings() {}
 
