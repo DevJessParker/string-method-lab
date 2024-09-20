@@ -21,7 +21,18 @@ function concatenateStrings(text1,text2) {
 }
 
 
-function doesInclude() {}
+function doesInclude(text1,text2) {
+    if (text1 && text2) {
+        if (typeof(text2) == 'number') {
+            return 'Value given to function was of Data Type: number';
+        } else {
+            return text2.includes(text2);
+        }
+    } else {
+        return 'String is empty';
+    }
+}
+
 
 
 function getIndexOf() {}
