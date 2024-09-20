@@ -86,7 +86,17 @@ function convertToLowerCase(phrase) {
 }
 
 
-function convertToUpperCase() {}
+function convertToUpperCase(phrase) {
+    if (phrase) {
+        if (typeof(phrase) == 'number') {
+            return 'Value given to function was of Data Type: number';
+        } else {
+            return phrase.toUpperCase();
+        }
+    } else {
+        return 'String is empty';
+    }
+}
 
 
 function trimString() {}
