@@ -21,12 +21,12 @@ function concatenateStrings(text1,text2) {
 }
 
 
-function doesInclude(text1,text2) {
-    if (text1 && text2) {
-        if (typeof(text2) == 'number') {
+function doesInclude(phrase,word) {
+    if (phrase && word) {
+        if ((typeof(word) || typeof(phrase)) == 'number') {
             return 'Value given to function was of Data Type: number';
         } else {
-            return text2.includes(text2);
+            return phrase.includes(word);
         }
     } else {
         return 'String is empty';
@@ -34,8 +34,17 @@ function doesInclude(text1,text2) {
 }
 
 
-
-function getIndexOf() {}
+function getIndexOf(phrase,word) {
+    if (phrase && word) {
+        if ((typeof(phrase) || typeof(word)) == 'number') {
+            return 'Value given to function was of Data Type: number';
+        } else {
+            return phrase.indexOf(word);
+        }
+    } else {
+        return 'String is empty';
+    }
+}
 
 
 function sliceString() {}
