@@ -60,7 +60,17 @@ function sliceString(phrase,position1,position2) {
 }
 
 
-function splitString() {}
+function splitString(phrase,separator) {
+    if (phrase) {
+        if (typeof(phrase) == 'number') {
+            return 'Value given to function was of Data Type: number';
+        } else {
+            return phrase.split(separator);
+        }
+    } else {
+        return 'String is empty';
+    }
+}
 
 
 function convertToLowerCase() {}
