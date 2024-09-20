@@ -21,12 +21,12 @@ function concatenateStrings(text1,text2) {
 }
 
 
-function doesInclude(phrase,word) {
-    if (phrase && word) {
-        if ((typeof(phrase) || typeof(word)) == 'number') {
+function doesInclude(text1,text2) {
+    if (text1 && text2) {
+        if (typeof(text2) == 'number') {
             return 'Value given to function was of Data Type: number';
         } else {
-            return phrase.includes(word);
+            return text2.includes(text2);
         }
     } else {
         return 'String is empty';
