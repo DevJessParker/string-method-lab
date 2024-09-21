@@ -1,13 +1,12 @@
-function getCharAt(str) {
-    if (str) {
-        if (typeof(str) == 'string') {
-            let testString = str;
-            return testString.charAt(1);
+function getCharAt(stringInput,indexNumber) {
+    if (stringInput) {
+        if (typeof(stringInput) == 'string') {
+            return stringInput.charAt(indexNumber);
         } else {
             return 'Value given to function was of Data Type: number';
         }
     } else {
-        return 'String is empty'
+        return 'String is empty';
     }
 }
 
