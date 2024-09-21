@@ -108,7 +108,17 @@ function trimString(text) {
 }
 
 
-function replaceSubstring() {}
+function replaceSubstring(phrase,searchTerm,replacementTerm) {
+    if (phrase && searchTerm && replacementTerm) {
+        if ((typeof(searchTerm) || typeof(replacementTerm)) == 'number') {
+            return 'Value given to function was of Data Type: number';
+        } else {
+            return phrase.replace(searchTerm,replacementTerm);
+        }
+    } else {
+        return 'String is empty';
+    }
+}
 
 
 
