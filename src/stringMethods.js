@@ -35,7 +35,7 @@ function doesInclude(phrase,word) {
 
 function getIndexOf(phrase,word) {
     if (phrase && word) {
-        if ((typeof(phrase) || typeof(word)) == 'number') {
+        if ((typeof(phrase) == 'number') || (typeof(word) == 'number')) {
             return 'Value given to function was of Data Type: number';
         } else {
             return phrase.indexOf(word);
