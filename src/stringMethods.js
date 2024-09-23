@@ -12,11 +12,14 @@ function getCharAt(stringInput,indexNumber) {
 
 
 function concatenateStrings(text1,text2) {
-    if ((typeof(text1) || typeof(text2)) == 'number') {
-        return 'Value given to function was of Data Type: number';
-    } else {
-        return text1.concat(text2);
+    if (typeof(text1) !== 'string') {
+        return `Value given to function was of Data Type: ${typeof(text1)}`;
     }
+    if (typeof(text2) !== 'string') {
+        return `Value given to function was of Data Type: ${typeof(text2)}`;
+    }
+    return text1.concat(text2);
+    
 }
 
 
