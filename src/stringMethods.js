@@ -22,7 +22,7 @@ function concatenateStrings(text1,text2) {
 
 function doesInclude(phrase,word) {
     if (phrase && word) {
-        if ((typeof(word) || typeof(phrase)) == 'number') {
+        if ((typeof(phrase) == 'number') || (typeof(word) == 'number')) {
             return 'Value given to function was of Data Type: number';
         } else {
             return phrase.includes(word);
