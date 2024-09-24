@@ -35,16 +35,17 @@ function doesInclude(phrase, word) {
 }
 
 
-function getIndexOf(phrase,word) {
-    if (phrase && word) {
-        if ((typeof(phrase) == 'number') || (typeof(word) == 'number')) {
-            return 'Value given to function was of Data Type: number';
-        } else {
-            return phrase.indexOf(word);
-        }
-    } else {
+function getIndexOf(phrase, word) {
+    if (!phrase || !word) {
         return 'String is empty';
     }
+    if (typeof(phrase) !== 'string') {
+        return `Value given to function was of Data Type: ${typeof(phrase)}`;
+    }
+    if (typeof(word) !== 'string') {
+        return `Value given to function was of Data Type: ${typeof(word)}`;
+    }
+    return phrase.indexOf(word);
 }
 
 
