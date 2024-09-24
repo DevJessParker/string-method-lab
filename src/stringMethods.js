@@ -49,16 +49,14 @@ function getIndexOf(phrase, word) {
 }
 
 
-function sliceString(phrase,position1,position2) {
-    if (phrase) {
-        if (typeof(phrase) == 'number') {
-            return 'Value given to function was of Data Type: number';
-        } else {
-            return phrase.slice(position1,position2);
-        }
-    } else {
+function sliceString(phrase, position1, position2) {
+    if (!phrase) {
         return 'String is empty';
     }
+    if (typeof(phrase) !== 'string') {
+        return `Value given to function was of Data Type: ${typeof(phrase)}`;
+    }
+    return phrase.slice(position1, position2);
 }
 
 
