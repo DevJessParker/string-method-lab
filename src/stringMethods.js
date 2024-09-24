@@ -21,16 +21,17 @@ function concatenateStrings(text1, text2) {
 }
 
 
-function doesInclude(phrase,word) {
-    if (phrase && word) {
-        if ((typeof(phrase) == 'number') || (typeof(word) == 'number')) {
-            return 'Value given to function was of Data Type: number';
-        } else {
-            return phrase.includes(word);
-        }
-    } else {
+function doesInclude(phrase, word) {
+    if (!phrase || !word) {
         return 'String is empty';
     }
+    if (typeof(phrase) !== 'string') {
+        return `Value given to function was of Data Type: ${typeof(phrase)}`;
+    }
+    if (typeof(word) !== 'string') {
+        return `Value given to function was of Data Type: ${typeof(word)}`;
+    }
+    return phrase.includes(word);
 }
 
 
