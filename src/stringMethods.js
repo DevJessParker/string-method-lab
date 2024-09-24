@@ -1,15 +1,15 @@
-function getCharAt(stringInput,indexNumber) {
+function getCharAt(stringInput, indexNumber) {
     if (!stringInput) {
         return 'String is empty';
     }
     if (typeof(stringInput) !== 'string') {
-        return `Value given to function was of Data Type: ${typeof(stringInput)}`
+        return `Value given to function was of Data Type: ${typeof(stringInput)}`;
     }
     return stringInput.charAt(indexNumber);
 }
 
 
-function concatenateStrings(text1,text2) {
+function concatenateStrings(text1, text2) {
     if (typeof(text1) !== 'string') {
         return `Value given to function was of Data Type: ${typeof(text1)}`;
     }
