@@ -1,13 +1,11 @@
 function getCharAt(stringInput,indexNumber) {
-    if (stringInput) {
-        if (typeof(stringInput) == 'string') {
-            return stringInput.charAt(indexNumber);
-        } else {
-            return 'Value given to function was of Data Type: number';
-        }
-    } else {
+    if (!stringInput) {
         return 'String is empty';
     }
+    if (typeof(stringInput) !== 'string') {
+        return `Value given to function was of Data Type: ${typeof(stringInput)}`
+    }
+    return stringInput.charAt(indexNumber);
 }
 
 
